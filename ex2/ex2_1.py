@@ -1,5 +1,4 @@
 
-
 def checksum(input):
     file = open(input, "r")
     container_of_letters = {}

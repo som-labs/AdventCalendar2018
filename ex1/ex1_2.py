@@ -1,23 +1,16 @@
 
+def frequencies2(filename):
+    total_freq = 0
+    freqs = set([0])
 
-# Prova 2
-def ex1_2(input):
-    f = open(input, "r")
-    acum = 0
-    generats = set()
-    generats.add(acum)
     trobat = False
-
     while not trobat:
-        for num in f:
-            acum += int(num)
-            if (acum not in generats):
-                generats.add(acum)
-            else:
-                trobat = True
+        f = open(filename, "r")
+        for line in f:
+            total_freq += int(line)
+            trobat = total_freq in freqs
+            if trobat:
+                return total_freq
                 break
-        else:
-            if (not trobat):
-                f.close()
-                f = open(input, "r")
-    return acum
+            else:
+                freqs.add(total_freq)
