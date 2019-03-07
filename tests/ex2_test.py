@@ -2,6 +2,7 @@ import unittest
 from ex2 import ex2_1
 from ex2 import ex2_2
 
+
 class TestOutputEx2(unittest.TestCase):
 
     def test__checksum(self):
@@ -15,10 +16,8 @@ class TestOutputEx2(unittest.TestCase):
         self.assertEqual(ex2_2.findTwice("ex2/inputs/inputDavid2.txt"), 'abcde')
         self.assertEqual(ex2_2.findTwice("ex2/inputs/inputDavid3.txt"), 'bcde')
         self.assertEqual(ex2_2.findTwice("ex2/inputs/inputMarta3.txt"), "tjxmoewpdkyaihvrndfluwbzc")
-        self.assertEqual(ex2_2.findTwice("ex2/inputs/inputMarta2.txt"), "fgij")
-
+        self.assertEqual(ex2_2.findTwice("ex2/inputs/inputMarta2.txt"), "abcde")
 
 
 if __name__ == '__main__':
     unittest.main()
-
